@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateReview.AnonymousFun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateReview.LambdaEx", "DelegateReview.LambdaEx\DelegateReview.LambdaEx.csproj", "{8971870C-F0B8-413F-8C15-8315AF8592CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateReview.LambdaEx.V2", "Delegate.LambdaEx.V2\DelegateReview.LambdaEx.V2.csproj", "{06A42A70-4EF5-471E-BF16-DF15C7E08CCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateReview.LambdaEx.V3", "DelegateReview.LambdaEx.V3\DelegateReview.LambdaEx.V3.csproj", "{46002D76-3BD1-405D-8638-70D260EFFE0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{8971870C-F0B8-413F-8C15-8315AF8592CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8971870C-F0B8-413F-8C15-8315AF8592CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8971870C-F0B8-413F-8C15-8315AF8592CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06A42A70-4EF5-471E-BF16-DF15C7E08CCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A42A70-4EF5-471E-BF16-DF15C7E08CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A42A70-4EF5-471E-BF16-DF15C7E08CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A42A70-4EF5-471E-BF16-DF15C7E08CCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46002D76-3BD1-405D-8638-70D260EFFE0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46002D76-3BD1-405D-8638-70D260EFFE0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46002D76-3BD1-405D-8638-70D260EFFE0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46002D76-3BD1-405D-8638-70D260EFFE0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

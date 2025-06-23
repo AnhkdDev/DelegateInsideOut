@@ -23,7 +23,7 @@
             //2 4 6 8 10 => 30;
             //  =====> KĨ THUẬT RÚT GỌN PHÂN SỐ/ BIỂU THỨC
             //RÚT GỌN ANONYMOUS MEHTHOD ĐỂ CHỈ CÒN CÁI DÂY NỊT => LAMBDA EXPRESSION
-            f += () =>
+            f = () =>
             {
                 int sum = 0;
                 Console.Write("sum of evens numbers (1 ... 10) = ");
@@ -51,6 +51,8 @@
             //CÚ PHÁP GÕ LAMBDA
             //Tên-datatype-delegate     biến-trỏ-hàm    =   delegate() { ... }; //ANONYMOUS
             //Tên-datatype-delegate     biến-trỏ-hàm    =   () => { ... };    //RÚT GỌN TIẾP...
+
+            //rút gọn chỉ chừa lại tham số() => với thân hàm {}  
 
 
         }
