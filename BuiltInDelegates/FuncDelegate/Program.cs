@@ -50,6 +50,8 @@ namespace FuncDelegate
             Func<double, bool> ff = n => n >= 8;
             Predicate<double> f4 = n => n >= 8;
             Console.WriteLine("10 >= 8? " + f4(4));
+
+            
         }
 
         static double ComputeExponent(double x) => x * x;
