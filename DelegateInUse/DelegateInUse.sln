@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassByAction", "PassByActio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassByActionGenericV1", "PassByActionGenericV1\PassByActionGenericV1.csproj", "{37A6A09F-CDF2-451C-A95B-47653081CF26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numerology", "Numberology\Numerology.csproj", "{6AEA289B-6941-44CC-ABDA-AACD7BC89E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassByFuncGeneric", "PassByActionGenericV2\PassByFuncGeneric.csproj", "{F855910C-E1BB-447E-B306-9606E4E1D01D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{37A6A09F-CDF2-451C-A95B-47653081CF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37A6A09F-CDF2-451C-A95B-47653081CF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37A6A09F-CDF2-451C-A95B-47653081CF26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AEA289B-6941-44CC-ABDA-AACD7BC89E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AEA289B-6941-44CC-ABDA-AACD7BC89E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AEA289B-6941-44CC-ABDA-AACD7BC89E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AEA289B-6941-44CC-ABDA-AACD7BC89E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F855910C-E1BB-447E-B306-9606E4E1D01D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F855910C-E1BB-447E-B306-9606E4E1D01D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F855910C-E1BB-447E-B306-9606E4E1D01D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F855910C-E1BB-447E-B306-9606E4E1D01D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

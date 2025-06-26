@@ -32,34 +32,34 @@ namespace PassByActionGenericV1
         //f(50);
         //}
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine("print even number from 5, 10, 15, 20");
-            PrintOnDemain(PrintEvenNumber); // in chẵn từ dãy 5, 10, 15, 20
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine("print even number from 5, 10, 15, 20");
+        //    PrintOnDemain(PrintEvenNumber); // in chẵn từ dãy 5, 10, 15, 20
 
-            Console.WriteLine("print odd number from 5, 10, 15, 20");
-            PrintOnDemain(PrintOddNumber); // in lẻ từ dãy 5, 10, 15, 20
+        //    Console.WriteLine("print odd number from 5, 10, 15, 20");
+        //    PrintOnDemain(PrintOddNumber); // in lẻ từ dãy 5, 10, 15, 20
 
-            Console.WriteLine("print prime number from 5, 10, 15, 20");
-            PrintOnDemain(PrintPrimeNumber); // in nguyên tố từ dãy 5, 10, 15, 20
+        //    Console.WriteLine("print prime number from 5, 10, 15, 20");
+        //    PrintOnDemain(PrintPrimeNumber); // in nguyên tố từ dãy 5, 10, 15, 20
 
-            Console.WriteLine("print >= 50 number from 5, 10, 15, 20");
-            PrintOnDemain(PrintNumberGt50); // in >= 50 từ dãy 5, 10, 15, 20
-            //nothing 
+        //    Console.WriteLine("print >= 50 number from 5, 10, 15, 20");
+        //    PrintOnDemain(PrintNumberGt50); // in >= 50 từ dãy 5, 10, 15, 20
+        //    //nothing 
 
-            //challenge 2: thách thức danh hài: in ra các số chia hết cho 5
-            //challenge 3: có số nào in số nấy, in hết
-            Console.WriteLine("print divisable by 5 number from 5 10 15 ...");
-            PrintOnDemain(n => { if (n % 5 == 0) Console.WriteLine(n); });
+        //    //challenge 2: thách thức danh hài: in ra các số chia hết cho 5
+        //    //challenge 3: có số nào in số nấy, in hết
+        //    Console.WriteLine("print divisable by 5 number from 5 10 15 ...");
+        //    PrintOnDemain(n => { if (n % 5 == 0) Console.WriteLine(n); });
 
-            Console.WriteLine("print all 5 10 15 20 25 ...");
-            PrintOnDemain(n => Console.WriteLine(n));
-            //tao cung cấp 1 con n bên trong cho mày, mày làm gì với n thì kệ mày
-            //có thằng sẽ check n là nguyên tố thì mới in, có thằng thì check chẵn mới in, có thằng thì gọi luôn!!!!!!
-        }
+        //    Console.WriteLine("print all 5 10 15 20 25 ...");
+        //    PrintOnDemain(n => Console.WriteLine(n));
+        //    //tao cung cấp 1 con n bên trong cho mày, mày làm gì với n thì kệ mày
+        //    //có thằng sẽ check n là nguyên tố thì mới in, có thằng thì check chẵn mới in, có thằng thì gọi luôn!!!!!!
+        //}
 
         //làm hàm style thầu dịch vụ
-        // tao là 1 h àm nhận vào 1 h àm khác có tham số int x
+        //tao là 1 hàm nhận vào 1 h àm khác có tham số int x
         //tao chịu trách nhiệm gọi hàm bên ngoài đưa vào, tao thảy cho nó 
         //tao phó mặc cho hàm đố làm gì thì làm với có số tao thảy cho
         //tao trở nên linh hoạt với nhu cầu xử lí data của mọi người
@@ -85,11 +85,28 @@ namespace PassByActionGenericV1
             //
         }
 
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine(">= 50: ");
+            PrintOnDemainV2(PrintNumberGt50);
+            //challenge 4: in số chia hết cho 3
+            Console.WriteLine("divisable by 3 number: ");
+            PrintOnDemainV2(n => { if (n % 3 == 0) Console.WriteLine(n); });
+        }
+
         static void PrintOnDemainV2(Action<int> f)
         {
             //nếu ta có nhiều data cần sàng lọc theo nhu cầu bên ngoài, đưa data vào trong mảng
             //lever hôm qua: TAO GỌI MÀY, MÀY LÀM ĐI, Action f, làm trọn gói đóng kín luôn
-            //lever hôm nay: ta gọi mày, mày làm đi Action<int> f. tao tử tế gửi thêm
+            //lever hôm nay: ta gọi mày, mày làm đi Action<int> f. tao tử tế gửi thêm info cho mày, mày làm gì info thì kệ mày
+            //nếu tao có nhiều data, tao đưa hết cho mày qua vòng for() mới gọi được mày nhiều lần, mày làm gì với đám data tao gửi kệ mày: CÓ DATA VÀ KÊU GỌI XỬ LÍ Ở BÊN NGOÀI
+            //BÊN NGOÀI MUỐN IN CHẴN, IN LẺ, IN NGUYÊN TỐ, ÂM DƯƠNG... HỖ TRỢ H ẾT
+            List<int> arr = new List<int>() { 5, 10, 15, 20, 1, 3, 4, 5, 7, 99, 100, 101 };
+            foreach (int i in arr)
+            {
+                f(i);
+            }
         }
 
 
