@@ -1,4 +1,5 @@
 📌 Delegate trong C#
+
 Delegate trong C# là một kiểu dữ liệu đặc biệt được thiết kế để lưu trữ và gọi các phương thức có cùng chữ ký (signature) và kiểu trả về. Về bản chất, delegate đóng vai trò như một function pointer trong các ngôn ngữ như C/C++, nhưng an toàn hơn vì được kiểm tra kiểu ngay tại thời điểm biên dịch (type-safe).
 
 Delegate cho phép bạn:
