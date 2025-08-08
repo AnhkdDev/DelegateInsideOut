@@ -1,32 +1,26 @@
 📌 Delegate trong C#
-Delegate trong C# là một kiểu dữ liệu đặc biệt dùng để tham chiếu đến các phương thức có cùng chữ ký (signature) và kiểu trả về. Delegate hoạt động giống như một "con trỏ hàm" (function pointer) trong các ngôn ngữ khác, nhưng an toàn hơn và hỗ trợ lập trình hướng đối tượng.
+Delegate trong C# là một kiểu dữ liệu đặc biệt được thiết kế để lưu trữ và gọi các phương thức có cùng chữ ký (signature) và kiểu trả về. Về bản chất, delegate đóng vai trò như một function pointer trong các ngôn ngữ như C/C++, nhưng an toàn hơn vì được kiểm tra kiểu ngay tại thời điểm biên dịch (type-safe).
 
-Delegate thường được sử dụng để:
+Delegate cho phép bạn:
 
-Truyền phương thức như một tham số cho phương thức khác.
+Tham chiếu đến phương thức mà không cần biết chính xác phương thức đó nằm ở đâu trong chương trình.
 
-Tách biệt logic xử lý và hành động thực thi (decoupling).
+Truyền phương thức như một tham số vào một phương thức khác, giúp tăng khả năng tái sử dụng và mở rộng.
 
-Xây dựng cơ chế callback hoặc event.
+Tách biệt (decouple) logic xử lý và hành vi thực thi, giúp mã dễ bảo trì và dễ thay đổi.
 
-Ví dụ cơ bản:
-// Khai báo delegate
-public delegate void Notify(string message);
+Xây dựng cơ chế callback để nhận thông báo khi một tác vụ hoàn thành.
 
-class Program
-{
-    static void Main()
-    {
-        // Gán phương thức cho delegate
-        Notify notifier = ShowMessage;
+Tạo nền tảng cho cơ chế event trong C#, vì event thực chất là delegate có ràng buộc truy cập đặc biệt.
 
-        // Gọi delegate
-        notifier("Hello from delegate!");
-    }
+Một số đặc điểm nổi bật của delegate:
 
-    static void ShowMessage(string msg)
-    {
-        Console.WriteLine(msg);
-    }
-}
-Khi biên dịch, delegate đảm bảo rằng chỉ các phương thức phù hợp với chữ ký đã khai báo mới có thể được gán, giúp code an toàn và dễ bảo trì.
+Type-safe – chỉ các phương thức có cùng chữ ký và kiểu trả về mới có thể gán cho delegate.
+
+Có thể tham chiếu nhiều phương thức cùng lúc (multicast delegate).
+
+Là đối tượng – có thể tạo mới, gán, truyền, và lưu trữ như một biến bình thường.
+
+Hỗ trợ ẩn danh – có thể sử dụng với phương thức ẩn danh (anonymous method) hoặc biểu thức lambda để viết code ngắn gọn.
+
+Nhờ những đặc tính này, delegate là một trong những thành phần cốt lõi trong lập trình hướng sự kiện và lập trình bất đồng bộ (asynchronous programming) trong C#.
