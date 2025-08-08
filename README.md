@@ -14,4 +14,25 @@ TinhToan phepCong = new TinhToan(Cong);
 // Gọi delegate
 int ketQua = phepCong(5, 3); // kết quả = 8
 
+3. Delegate ẩn danh (Anonymous Delegate)
+Delegate có thể được khai báo mà không cần phương thức riêng biệt:
 
+TinhToan tru = delegate(int a, int b) {
+    return a - b;
+};
+int kq = tru(10, 4); // kết quả = 6
+
+4. Sử dụng Lambda Expression với Delegate
+Lambda giúp viết gọn hơn:
+
+TinhToan nhan = (a, b) => a * b;
+int kq = nhan(3, 4); // kết quả = 12
+
+5. Multicast Delegate
+Delegate có thể trỏ đến nhiều phương thức:
+
+public delegate void ThongBao();
+
+ThongBao tb = A;
+tb += B;
+tb(); // gọi A rồi B
