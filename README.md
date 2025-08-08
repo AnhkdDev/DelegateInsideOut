@@ -36,3 +36,11 @@ public delegate void ThongBao();
 ThongBao tb = A;
 tb += B;
 tb(); // gọi A rồi B
+
+6. Ứng dụng Delegate
+- Lập trình sự kiện (event handling).
+- Call back function.
+- Kết hợp với LINQ, async.
+- Truyền phương thức làm tham số trong xử lý linh hoạt.
+7. Kết luận
+Delegate là một thành phần quan trọng trong C#, giúp mã nguồn linh hoạt và dễ bảo trì. Hiểu và sử dụng tốt delegate giúp bạn viết được các ứng dụng có kiến trúc tốt hơn.
